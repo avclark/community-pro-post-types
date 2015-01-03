@@ -1,0 +1,74 @@
+<?php
+/*
+    Plugin Name: Church Pro Custom Post Types
+    Plugin URI: http://www.calvinkoepke.com
+    Description: The official custom post types for the Church Pro Theme
+    Author: C. Koepke
+    Version: 1.0
+    Author URI: http://www.calvinkoepke.com
+*/
+
+defined('ABSPATH') or die("No script kiddies please!");
+
+require_once("lib/post-types/church-pro-events.php");
+require_once("lib/post-types/church-pro-sermons.php");
+
+/**
+  *
+  * Fire Custom Post Type Functions
+  * @author Calvin Koepke
+  * @version 1.0.0
+  *
+  */
+
+//* Church Pro Events
+add_action( 'genesis_setup', 'church_pro_events' );
+add_action( 'admin_init', 'church_pro_events_meta_admin' );
+
+//* Church Pro Sermons
+add_action( 'genesis_setup', 'church_pro_sermons' );
+add_action( 'admin_init', 'church_pro_sermons_meta_admin' );
+add_action( 'init', 'church_pro_remove_subtitles_support' );
+function church_pro_remove_subtitles_support() {
+  remove_post_type_support( 'church-pro-sermons', 'subtitles' );
+}
+
+
+/**
+  *
+  * Register Custom Post Type Widgets
+  * @author StudioPress
+  * @author Jo Waltham
+  * @author Pete Favelle
+  * @author Robin Cornett
+  * @author Calvin Koepke
+  * @version 1.0.0
+  *
+  */
+add_action( 'init', 'gfcptw_init' );
+function gfcptw_init() {
+	if ( 'genesis' !== basename( get_template_directory() ) ) {
+		add_action( 'admin_init', 'gfcptw_deactivate' );
+		add_action( 'admin_notices', 'gfcptw_notice' );
+		return;
+	}
+
+}
+
+function gfcptw_deactivate() {
+	deactivate_plugins( plugin_basename( __FILE__ ) );
+}
+
+function gfcptw_notice() {
+	echo '<div class="error"><p><strong>Church Pro - Event Widget</strong> works only with the Genesis Framework. It has been <strong>deactivated</strong>.</p></div>';
+}
+
+// Register the widget
+add_action( 'widgets_init', 'gfcptw_register_widget' );
+function gfcptw_register_widget() {
+	register_widget( 'Church_Pro_Event_Widget' );
+  register_widget( 'Church_Pro_Sermon_Widget' );
+}
+
+require plugin_dir_path( __FILE__ ) . 'lib/widgets/church-pro-events-widget.php';
+require plugin_dir_path( __FILE__ ) . 'lib/widgets/church-pro-sermons-widget.php';
