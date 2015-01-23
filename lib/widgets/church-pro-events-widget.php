@@ -165,13 +165,13 @@ class Church_Pro_Event_Widget extends WP_Widget {
 
 			if ( ! empty( $event_date_data ) )
 				//* Make date look pretty
-				echo '<div class="event-date"><i class="ss-icon ss-standard">date</i> ' . $event_date_data . '</div>';
+				echo '<div class="event-date"><span class="dashicons dashicons-calendar-alt"></span> ' . $event_date_data . '</div>';
 
 			if ( ! empty( $event_time_data ) )
-				echo '<div class="event-time"><i class="ss-icon ss-standard">time</i> ' . date("g:i A", strtotime($event_time_data)) . '</div>';
+				echo '<div class="event-time"><span class="dashicons dashicons-clock"></span> ' . date("g:i A", strtotime($event_time_data)) . '</div>';
 
 			if ( ! empty( $event_venue_data ) )
-				echo '<div class="event-venue"><i class="ss-icon ss-standard">location</i>' . $event_venue_data . '</div>';
+				echo '<div class="event-venue"><span class="dashicons dashicons-location"></span>' . $event_venue_data . '</div>';
 
 			echo '</div>';
 

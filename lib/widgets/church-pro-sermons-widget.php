@@ -148,7 +148,7 @@ class Church_Pro_Sermon_Widget extends WP_Widget {
 
 			if ( ! empty( $sermon_speaker ) )
 				//* Make date look pretty
-				echo '<div class="sermon-speaker"><i class="ss-icon ss-standard">user</i> ' . $sermon_speaker . '</div>';
+				echo '<div class="sermon-speaker"><span class="dashicons dashicons-admin-users"></span> ' . $sermon_speaker . '</div>';
 
 			echo '</div>';
 
