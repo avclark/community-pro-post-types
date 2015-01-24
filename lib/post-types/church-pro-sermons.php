@@ -21,13 +21,12 @@ function church_pro_sermons() {
 			'view_item'			=> __( 'View Sermon', 'church_pro' ),
 			'search_items'		=> __( 'Search Sermons', 'church_pro' )
 		),
-		'has_archive'			=> true,
+		'has_archive'			=> false,
 		'hierarchical'			=> false,
 		'menu_icon'				=> 'dashicons-microphone',
 		'menu_position'			=> 20,
 		'public'				=> true,
 		'supports'				=> array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'revisions', 'genesis-seo', 'genesis-cpt-archives-settings' ),
-		'taxonomies'			=> array( 'category' ),
 		'rewrite'				=> array( 'slug' => 'sermon', 'with_front' => true ),
 	);
 

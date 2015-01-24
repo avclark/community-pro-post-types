@@ -12,6 +12,7 @@ defined('ABSPATH') or die("No script kiddies please!");
 
 require_once("lib/post-types/church-pro-events.php");
 require_once("lib/post-types/church-pro-sermons.php");
+require_once("lib/post-types/church-pro-staff.php");
 
 /**
   *
@@ -31,6 +32,13 @@ add_action( 'admin_init', 'church_pro_sermons_meta_admin' );
 add_action( 'init', 'church_pro_remove_subtitles_support' );
 function church_pro_remove_subtitles_support() {
   remove_post_type_support( 'church-pro-sermons', 'subtitles' );
+}
+
+//* Church Pro Staff
+add_action( 'genesis_setup', 'church_pro_staff' );
+add_action( 'init', 'church_pro_add_subtitles_support' );
+function church_pro_add_subtitles_support() {
+    add_post_type_support( 'church-pro-staff', 'subtitles' );
 }
 
 
