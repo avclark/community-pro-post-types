@@ -26,7 +26,7 @@ function church_pro_staff() {
 		'menu_icon'				=> 'dashicons-admin-users',
 		'menu_position'			=> 20,
 		'public'				=> true,
-		'supports'				=> array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'revisions', 'genesis-seo', 'genesis-cpt-archives-settings' ),
+		'supports'				=> array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'revisions', 'genesis-seo' ),
 		'rewrite'				=> array( 'slug' => 'staff', 'with_front' => true ),
 	);
 

@@ -26,7 +26,7 @@ function church_pro_sermons() {
 		'menu_icon'				=> 'dashicons-microphone',
 		'menu_position'			=> 20,
 		'public'				=> true,
-		'supports'				=> array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'revisions', 'genesis-seo', 'genesis-cpt-archives-settings' ),
+		'supports'				=> array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'revisions', 'genesis-seo' ),
 		'rewrite'				=> array( 'slug' => 'sermon', 'with_front' => true ),
 	);
 
