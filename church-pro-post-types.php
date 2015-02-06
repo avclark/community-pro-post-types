@@ -1,11 +1,11 @@
 <?php
 /*
     Plugin Name: Church Pro Custom Post Types
-    Plugin URI: http://www.calvinkoepke.com
+    Plugin URI: http://www.calvinmakes.com
     Description: The official custom post types for the Church Pro Theme
-    Author: C. Koepke
+    Author: Calvin Makes
     Version: 1.0
-    Author URI: http://www.calvinkoepke.com
+    Author URI: http://www.calvinmakes.com
 */
 
 defined('ABSPATH') or die("No script kiddies please!");
@@ -13,7 +13,7 @@ defined('ABSPATH') or die("No script kiddies please!");
 require_once("lib/post-types/church-pro-events.php");
 require_once("lib/post-types/church-pro-sermons.php");
 require_once("lib/post-types/church-pro-staff.php");
-require_once("lib/taxonomies/church-pro-staff-category.php");
+require_once("lib/taxonomies/church-pro-cpt-taxonomies.php");
 
 /**
   *
@@ -24,6 +24,7 @@ require_once("lib/taxonomies/church-pro-staff-category.php");
   */
 
 add_action( 'genesis_setup', 'church_pro_staff_taxonomies' );
+add_action( 'genesis_setup', 'church_pro_sermon_taxonomies' );
 
 /**
   *

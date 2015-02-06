@@ -100,27 +100,14 @@ class Church_Pro_Event_Widget extends WP_Widget {
 			'post_type' => $instance['post_type'],
 			'showposts' => $instance['posts_num'],
 			'offset'    => $instance['posts_offset'],
-			'orderby'   => $instance['orderby'],
-			'order'     => $instance['order'],
+			'orderby'   => "meta_value=_church_pro_date_field&meta_type=DATETIME",
+			'order'     => "ASC"
 		);
 
-		// Extract the custom tax term, if provided
-		// if ( 'any' != $instance['tax_term'] ) {
-		// 	list( $post_tax, $post_term ) = explode( '/', $instance['tax_term'], 2 );
-		// 	$query_args['tax_query'] = array(
-		// 		array(
-		// 			'taxonomy' => $post_tax,
-		// 			'field'    => 'slug',
-		// 			'terms'    => $post_term,
-		// 		)
-		// 	);
-		// }
-
-		//* Exclude displayed IDs from this loop?
-		if ( $instance['exclude_displayed'] )
-			$query_args['post__not_in'] = (array) $_genesis_displayed_ids;
-
 		$wp_query = new WP_Query( $query_args );
+
+		// Set counter for showing only one.
+		$i = 0;
 
 		if ( have_posts() ) : while ( have_posts() ) : the_post();
 
@@ -131,6 +118,14 @@ class Church_Pro_Event_Widget extends WP_Widget {
 			$event_address_data = get_post_meta( $post->ID, '_church_pro_address_field', true );
 			$event_date_data = date("F d, Y", strtotime( get_post_meta( $post->ID, '_church_pro_date_field', true ) ) );
 			$event_time_data = get_post_meta( $post->ID, '_church_pro_time_field', true );
+			$yesterday = date("F d, Y", strtotime('1 day ago') );
+
+			//* If the event is over, skip it.
+			if ( $event_date_data <= $yesterday) {
+				continue;
+			} else {
+				$i++;
+			}
 
 			$_genesis_displayed_ids[] = get_the_ID();
 
@@ -139,12 +134,6 @@ class Church_Pro_Event_Widget extends WP_Widget {
 				'xhtml'   => sprintf( '<div class="%s">', implode( ' ', get_post_class() ) ),
 				'context' => 'entry',
 			) );
-
-			// if ( ! empty( $instance['show_gravatar'] ) ) {
-			// 	echo '<span class="' . esc_attr( $instance['gravatar_alignment'] ) . '">';
-			// 	echo get_avatar( get_the_author_meta( 'ID' ), $instance['gravatar_size'] );
-			// 	echo '</span>';
-			// }
 
 			echo '<div class="event-info">';
 
@@ -186,6 +175,11 @@ class Church_Pro_Event_Widget extends WP_Widget {
 				'html5' => '</article>',
 				'xhtml' => '</div>',
 			) );
+
+			//* If it's the homepage, show only one post.
+			if ( $i == 1 && is_front_page() ) {
+				return;
+			}
 
 		endwhile; endif;
 
@@ -256,29 +250,6 @@ class Church_Pro_Event_Widget extends WP_Widget {
 			<p>
 				<label for="<?php echo $this->get_field_id( 'posts_offset' ); ?>"><?php _e( 'Number of Events to Offset', 'church_pro' ); ?>:</label>
 				<input type="text" id="<?php echo $this->get_field_id( 'posts_offset' ); ?>" name="<?php echo $this->get_field_name( 'posts_offset' ); ?>" value="<?php echo esc_attr( $instance['posts_offset'] ); ?>" size="2" />
-			</p>
-
-			<p>
-				<label for="<?php echo $this->get_field_id( 'orderby' ); ?>"><?php _e( 'Order By', 'church_pro' ); ?>:</label>
-				<select id="<?php echo $this->get_field_id( 'orderby' ); ?>" name="<?php echo $this->get_field_name( 'orderby' ); ?>">
-					<option value="date" <?php selected( 'date', $instance['orderby'] ); ?>><?php _e( 'Date', 'church_pro' ); ?></option>
-					<option value="title" <?php selected( 'title', $instance['orderby'] ); ?>><?php _e( 'Title', 'church_pro' ); ?></option>
-					<option value="ID" <?php selected( 'ID', $instance['orderby'] ); ?>><?php _e( 'ID', 'church_pro' ); ?></option>
-					<option value="rand" <?php selected( 'rand', $instance['orderby'] ); ?>><?php _e( 'Random', 'church_pro' ); ?></option>
-				</select>
-			</p>
-
-			<p>
-				<label for="<?php echo $this->get_field_id( 'order' ); ?>"><?php _e( 'Sort Order', 'church_pro' ); ?>:</label>
-				<select id="<?php echo $this->get_field_id( 'order' ); ?>" name="<?php echo $this->get_field_name( 'order' ); ?>">
-					<option value="DESC" <?php selected( 'DESC', $instance['order'] ); ?>><?php _e( 'Descending (3, 2, 1)', 'church_pro' ); ?></option>
-					<option value="ASC" <?php selected( 'ASC', $instance['order'] ); ?>><?php _e( 'Ascending (1, 2, 3)', 'church_pro' ); ?></option>
-				</select>
-			</p>
-
-			<p>
-				<input id="<?php echo $this->get_field_id( 'exclude_displayed' ); ?>" type="checkbox" name="<?php echo $this->get_field_name( 'exclude_displayed' ); ?>" value="1" <?php checked( $instance['exclude_displayed'] ); ?>/>
-				<label for="<?php echo $this->get_field_id( 'exclude_displayed' ); ?>"><?php _e( 'Exclude Previously Displayed Events?', 'church_pro' ); ?></label>
 			</p>
 
 		</div>
