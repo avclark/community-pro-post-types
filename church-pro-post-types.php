@@ -13,6 +13,17 @@ defined('ABSPATH') or die("No script kiddies please!");
 require_once("lib/post-types/church-pro-events.php");
 require_once("lib/post-types/church-pro-sermons.php");
 require_once("lib/post-types/church-pro-staff.php");
+require_once("lib/taxonomies/church-pro-staff-category.php");
+
+/**
+  *
+  * Register Custom Taxonomies
+  * @author Calvin Koepke
+  * @version 1.0.0
+  *
+  */
+
+add_action( 'genesis_setup', 'church_pro_staff_taxonomies' );
 
 /**
   *

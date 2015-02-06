@@ -21,12 +21,12 @@ function church_pro_staff() {
 			'view_item'			=> __( 'View Staff Member', 'church_pro' ),
 			'search_items'		=> __( 'Search Staff', 'church_pro' )
 		),
-		'has_archive'			=> false,
+		'has_archive'			=> true,
 		'hierarchical'			=> false,
 		'menu_icon'				=> 'dashicons-admin-users',
 		'menu_position'			=> 20,
 		'public'				=> true,
-		'supports'				=> array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'revisions', 'genesis-seo' ),
+		'supports'				=> array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'revisions', 'genesis-seo', 'genesis-cpt-archives-settings' ),
 		'rewrite'				=> array( 'slug' => 'staff', 'with_front' => true ),
 	);
 

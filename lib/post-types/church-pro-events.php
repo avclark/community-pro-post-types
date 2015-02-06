@@ -21,13 +21,15 @@ function church_pro_events() {
 			'view_item'			=> __( 'View Event', 'church_pro' ),
 			'search_items'		=> __( 'Search Events', 'church_pro' )
 		),
-		'has_archive'			=> false,
-		'hierarchical'			=> false,
+		'has_archive'			=> true,
+		'taxonomies'			=> array(
+
+		),
 		'menu_icon'				=> 'dashicons-calendar-alt',
 		'menu_position'			=> 20,
 		'public'				=> true,
-		'supports'				=> array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'revisions', 'genesis-seo' ),
-		'rewrite'				=> array( 'slug' => 'event', 'with_front' => true ),
+		'supports'				=> array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'revisions', 'genesis-seo', 'genesis-cpt-archives-settings' ),
+		'rewrite'				=> array( 'slug' => 'events', 'with_front' => true ),
 	);
 
 	register_post_type( 'church-pro-events', $args);
@@ -59,7 +61,7 @@ function church_pro_events_meta_admin() {
 	    $event_address = get_post_meta( $post->ID, '_church_pro_address_field', true );
 	    $event_date = get_post_meta( $post->ID, '_church_pro_date_field', true );
 	    $event_time = get_post_meta( $post->ID, '_church_pro_time_field', true );
-	    $event_cost = get_post_meta( $post->ID, '_church_pro_cost_field', true );
+	    // $event_cost = get_post_meta( $post->ID, '_church_pro_cost_field', true );
 
     	echo	'<label for="church_pro_event_venue">Venue</label>',
 				'<input type="text" id="event-venue" name="church_pro_venue_field" value="' . $event_venue . '" size="25" style="width: 100%;" />',
@@ -68,9 +70,9 @@ function church_pro_events_meta_admin() {
 				'<label for="church_pro_event_date">Date</label>',
 				'<input type="date" id="event-date" name="church_pro_date_field" value="' . $event_date . '" size="25" style="width: 100%;" />',
 				'<label for="church_pro_event_time">Time</label>',
-				'<input type="time" id="event-time" name="church_pro_time_field" value="' . $event_time . '" size="25" style="width: 100%;" />',
-				'<label for="church_pro_event_cost">Cost (if applicable)</label>',
-				'<input type="text" id="event-cost" name="church_pro_cost_field" value="' . $event_cost . '" size="25" style="width: 100%;" />';
+				'<input type="time" id="event-time" name="church_pro_time_field" value="' . $event_time . '" size="25" style="width: 100%;" />';
+				// '<label for="church_pro_event_cost">Cost (if applicable)</label>',
+				// '<input type="text" id="event-cost" name="church_pro_cost_field" value="' . $event_cost . '" size="25" style="width: 100%;" />';
 
 	}
 
@@ -99,16 +101,16 @@ function church_pro_events_meta_admin() {
 		if ( ! isset( $_POST['church_pro_time_field'] ) ) {
 			return;
 		}
-		if ( ! isset( $_POST['church_pro_cost_field'] ) ) {
-			return;
-		}
+		// if ( ! isset( $_POST['church_pro_cost_field'] ) ) {
+		// 	return;
+		// }
 
 		//* Sanatize
 		$venue_data = sanitize_text_field( $_REQUEST['church_pro_venue_field'] );
 		$address_data = sanitize_text_field( $_REQUEST['church_pro_address_field'] );
 		$date_data = sanitize_text_field( $_REQUEST['church_pro_date_field'] );
 		$time_data = sanitize_text_field( $_REQUEST['church_pro_time_field'] );
-		$cost_data = sanitize_text_field( $_REQUEST['church_pro_cost_field'] );
+		// $cost_data = sanitize_text_field( $_REQUEST['church_pro_cost_field'] );
 
 		//* Update the meta field in the database.
 		if ( isset( $_REQUEST['church_pro_venue_field'] ) ) {
@@ -123,8 +125,8 @@ function church_pro_events_meta_admin() {
 		if ( isset( $_REQUEST['church_pro_time_field'] ) ) {
 			update_post_meta( $post_id, '_church_pro_time_field', $time_data );
 		}
-		if ( isset( $_REQUEST['church_pro_cost_field'] ) ) {
-			update_post_meta( $post_id, '_church_pro_cost_field', $cost_data );
-		}
+		// if ( isset( $_REQUEST['church_pro_cost_field'] ) ) {
+		// 	update_post_meta( $post_id, '_church_pro_cost_field', $cost_data );
+		// }
 	}
 }
