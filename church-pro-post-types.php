@@ -81,7 +81,6 @@ function gfcptw_notice() {
 // Register the widget
 add_action( 'widgets_init', 'gfcptw_register_widget' );
 function gfcptw_register_widget() {
-	register_widget( 'Church_Pro_Event_Widget' );
   register_widget( 'Church_Pro_Sermon_Widget' );
 }
 
