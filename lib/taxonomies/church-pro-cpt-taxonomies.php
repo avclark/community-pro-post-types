@@ -61,7 +61,7 @@ function church_pro_sermon_taxonomies() {
 		'show_ui'           => true,
 		'show_admin_column' => true,
 		'query_var'         => true,
-		'rewrite'           => array( 'slug' => 'sermon-category' ),
+		'rewrite'           => false,
 	);
 
 	register_taxonomy( 'sermons', array('church-pro-sermons'), $args);
