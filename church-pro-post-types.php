@@ -10,7 +10,6 @@
 
 defined('ABSPATH') or die("No script kiddies please!");
 
-require_once("lib/post-types/church-pro-events.php");
 require_once("lib/post-types/church-pro-sermons.php");
 require_once("lib/post-types/church-pro-staff.php");
 require_once("lib/taxonomies/church-pro-cpt-taxonomies.php");
@@ -33,10 +32,6 @@ add_action( 'genesis_setup', 'church_pro_sermon_taxonomies' );
   * @version 1.0.0
   *
   */
-
-//* Church Pro Events
-add_action( 'genesis_setup', 'church_pro_events' );
-add_action( 'admin_init', 'church_pro_events_meta_admin' );
 
 //* Church Pro Sermons
 add_action( 'genesis_setup', 'church_pro_sermons' );
@@ -80,7 +75,7 @@ function gfcptw_deactivate() {
 }
 
 function gfcptw_notice() {
-	echo '<div class="error"><p><strong>Church Pro - Event Widget</strong> works only with the Genesis Framework. It has been <strong>deactivated</strong>.</p></div>';
+	echo '<div class="error"><p><strong>Church Pro - Sermons Widget</strong> works only with the Genesis Framework. It has been <strong>deactivated</strong>.</p></div>';
 }
 
 // Register the widget
@@ -90,5 +85,4 @@ function gfcptw_register_widget() {
   register_widget( 'Church_Pro_Sermon_Widget' );
 }
 
-require plugin_dir_path( __FILE__ ) . 'lib/widgets/church-pro-events-widget.php';
 require plugin_dir_path( __FILE__ ) . 'lib/widgets/church-pro-sermons-widget.php';
