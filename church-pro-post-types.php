@@ -82,6 +82,8 @@ function gfcptw_notice() {
 add_action( 'widgets_init', 'gfcptw_register_widget' );
 function gfcptw_register_widget() {
   register_widget( 'Church_Pro_Sermon_Widget' );
+  register_widget( 'Church_Pro_Featured_Widget')
 }
 
 require plugin_dir_path( __FILE__ ) . 'lib/widgets/church-pro-sermons-widget.php';
+require plugin_dir_path( __FILE__ ) . 'lib/widgets/church-pro-featured-post-widget.php';
