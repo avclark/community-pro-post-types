@@ -79,24 +79,13 @@ class Church_Pro_Simple_CTA_Widget extends WP_Widget {
 
 		if ( have_posts() ) : while ( have_posts() ) : the_post();
 
-			genesis_markup( array(
-				'html5'   => '<article %s>',
-				'xhtml'   => sprintf( '<div class="%s">', implode( ' ', get_post_class() ) ),
-				'context' => 'entry',
-			) );
-
-				echo genesis_html5() ? '<div class="cta-widget-link">' : '';
+				echo '<div class="cta-widget-link">';
 
 					if ( ! empty( $instance['more_text'] ) ) {
 						printf('<a class="btn btn-primary" href="%s">%s</a>', get_permalink(), $instance['more_text']);
 					}
 
-				echo genesis_html5() ? '</div>' : '';
-
-			genesis_markup( array(
-				'html5' => '</article>',
-				'xhtml' => '</div>',
-			) );
+				echo '</div>';
 
 			endwhile;
 		endif;
