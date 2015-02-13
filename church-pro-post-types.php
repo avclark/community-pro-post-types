@@ -75,15 +75,17 @@ function gfcptw_deactivate() {
 }
 
 function gfcptw_notice() {
-	echo '<div class="error"><p><strong>Church Pro - Sermons Widget</strong> works only with the Genesis Framework. It has been <strong>deactivated</strong>.</p></div>';
+	echo '<div class="error"><p><strong>Church Pro Widgets</strong> only work with the Genesis Framework. It has been <strong>deactivated</strong>.</p></div>';
 }
 
 // Register the widget
 add_action( 'widgets_init', 'gfcptw_register_widget' );
 function gfcptw_register_widget() {
   register_widget( 'Church_Pro_Sermon_Widget' );
-  register_widget( 'Church_Pro_Featured_Widget')
+  register_widget( 'Church_Pro_Featured_Post');
+  register_widget( 'Church_Pro_Simple_CTA_Widget');
 }
 
 require plugin_dir_path( __FILE__ ) . 'lib/widgets/church-pro-sermons-widget.php';
 require plugin_dir_path( __FILE__ ) . 'lib/widgets/church-pro-featured-post-widget.php';
+require plugin_dir_path( __FILE__ ) . 'lib/widgets/church-pro-simple-cta-widget.php';

@@ -66,7 +66,7 @@ class Church_Pro_Sermon_Widget extends WP_Widget {
 			'height'  => 350,
 		);
 
-		parent::__construct( 'church-pro-sermons-widget', __( 'Church Pro - Sermons Widget', 'church_pro' ), $widget_ops, $control_ops );
+		parent::__construct( 'church-pro-sermons-widget', __( 'CP - Sermons Widget', 'church_pro' ), $widget_ops, $control_ops );
 
 		// Register our Ajax handler
 		add_action( 'wp_ajax_tax_term_action', array( $this, 'tax_term_action_callback' ) );

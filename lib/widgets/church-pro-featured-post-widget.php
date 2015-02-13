@@ -70,7 +70,7 @@ class Church_Pro_Featured_Post extends WP_Widget {
 			'height'  => 350,
 		);
 
-		parent::__construct( 'featured-post', __( 'Church Pro - Featured Posts', 'church_pro' ), $widget_ops, $control_ops );
+		parent::__construct( 'featured-post', __( 'CP - Featured Posts', 'church_pro' ), $widget_ops, $control_ops );
 
 	}
 
