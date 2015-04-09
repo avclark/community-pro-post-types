@@ -1,20 +1,20 @@
 <?php
 /**
- * A modified version of the Genesis Featured Page Widget for the Simple CTA Widget in Church Pro.
+ * A modified version of the Genesis Featured Page Widget for the Simple CTA Widget in Community Pro.
  *
  *
- * @package Church Pro Theme
+ * @package Community Pro Theme
  * @author  StudioPress, Calvin Makes
  */
 
 /**
- * Church Pro Simple CTA widget class.
+ * Community Pro Simple CTA widget class.
  *
  * @since 1.0
  *
- * @package Church Pro Theme
+ * @package Community Pro Theme
  */
-class Church_Pro_Simple_CTA_Widget extends WP_Widget {
+class Community_Pro_Simple_CTA_Widget extends WP_Widget {
 
 	/**
 	 * Holds widget settings defaults, populated in constructor.
@@ -38,7 +38,7 @@ class Church_Pro_Simple_CTA_Widget extends WP_Widget {
 
 		$widget_ops = array(
 			'classname'   => 'featured-content simple-cta',
-			'description' => __( 'Displays simple CTA for footer widget area', 'church_pro' ),
+			'description' => __( 'Displays simple CTA for footer widget area', 'community_pro' ),
 		);
 
 		$control_ops = array(
@@ -47,7 +47,7 @@ class Church_Pro_Simple_CTA_Widget extends WP_Widget {
 			'height'  => 250,
 		);
 
-		parent::__construct( 'simple-cta-widget', __( 'CP - Simple CTA', 'church_pro' ), $widget_ops, $control_ops );
+		parent::__construct( 'simple-cta-widget', __( 'CP - Simple CTA', 'community_pro' ), $widget_ops, $control_ops );
 
 	}
 
@@ -132,19 +132,19 @@ class Church_Pro_Simple_CTA_Widget extends WP_Widget {
 
 		?>
 		<p>
-			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title', 'church_pro' ); ?>:</label>
+			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title', 'community_pro' ); ?>:</label>
 			<input type="text" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" value="<?php echo esc_attr( $instance['title'] ); ?>" class="widefat" />
 		</p>
 
 		<p>
-			<label for="<?php echo $this->get_field_id( 'page_id' ); ?>"><?php _e( 'Page', 'church_pro' ); ?>:</label>
+			<label for="<?php echo $this->get_field_id( 'page_id' ); ?>"><?php _e( 'Page', 'community_pro' ); ?>:</label>
 			<?php wp_dropdown_pages( array( 'name' => $this->get_field_name( 'page_id' ), 'selected' => $instance['page_id'] ) ); ?>
 		</p>
 
 		<hr class="div" />
 
 		<p>
-			<label for="<?php echo $this->get_field_id( 'more_text' ); ?>"><?php _e( 'More Text', 'church_pro' ); ?>:</label>
+			<label for="<?php echo $this->get_field_id( 'more_text' ); ?>"><?php _e( 'More Text', 'community_pro' ); ?>:</label>
 			<input type="text" id="<?php echo $this->get_field_id( 'more_text' ); ?>" name="<?php echo $this->get_field_name( 'more_text' ); ?>" value="<?php echo esc_attr( $instance['more_text'] ); ?>" />
 		</p>
 		<?php

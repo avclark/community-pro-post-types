@@ -3,23 +3,23 @@
 /**
  * General purpose theme functions.
  *
- * @package     ChurchPro
+ * @package     Community Pro
  * @subpackage  Genesis
  * @copyright   Copyright (c) 2014, Bottlerocket Creative, LLC.
  * @license     GPL-2.0+
- * @since       1.0.0
+ * @since       1.1.0
  */
 
 //* Register Sermons Post Type
-function church_pro_staff() {
+function community_pro_staff() {
 	$args = array(
 		'labels'				=> array(
-			'name'				=> __( 'Staff', 'church_pro' ),
-			'singular_name'		=> __( 'Staff Member', 'church_pro' ),
-			'add_new_item'		=> __( 'Add New Staff Member', 'church_pro' ),
-			'edit_item'			=> __( 'Edit Staff Member', 'church_pro' ),
-			'view_item'			=> __( 'View Staff Member', 'church_pro' ),
-			'search_items'		=> __( 'Search Staff', 'church_pro' )
+			'name'				=> __( 'Staff', 'community-pro' ),
+			'singular_name'		=> __( 'Staff Member', 'community-pro' ),
+			'add_new_item'		=> __( 'Add New Staff Member', 'community-pro' ),
+			'edit_item'			=> __( 'Edit Staff Member', 'community-pro' ),
+			'view_item'			=> __( 'View Staff Member', 'community_pro' ),
+			'search_items'		=> __( 'Search Staff', 'community_pro' )
 		),
 		'has_archive'			=> true,
 		'hierarchical'			=> false,
@@ -30,5 +30,5 @@ function church_pro_staff() {
 		'rewrite'				=> array( 'slug' => 'staff', 'with_front' => true ),
 	);
 
-	register_post_type( 'church-pro-staff', $args);
+	register_post_type( 'community-pro-staff', $args);
 }
