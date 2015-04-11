@@ -43,6 +43,6 @@ For instance, if my domain is www.communityprotheme.com, then the Staff page wil
 You should now see the link on your navigation.
 
 ### Configuring the Sermons Archive Settings
-1. Navigate to **Sermons > Archive Settings**.
+1. Navigate to **Staff > Archive Settings**.
 2. Add the desired **Archive Title** and **Archive Intro Text**.
 3. Click the **Save Settings** button.
