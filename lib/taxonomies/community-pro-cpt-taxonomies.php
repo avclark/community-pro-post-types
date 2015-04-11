@@ -64,5 +64,5 @@ function community_pro_sermon_taxonomies() {
 		'rewrite'           => array( 'slug' => 'sermon-category' ),
 	);
 
-	register_taxonomy( 'sermons', array('community-pro-sermons'), $args);
+	register_taxonomy( 'sermon', array('community-pro-sermon'), $args);
 }
