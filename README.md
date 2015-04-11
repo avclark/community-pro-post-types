@@ -25,7 +25,7 @@ The Staff page is a way to organize staff information for your organization or c
 7. Click the **Publish** button.
 
 Now that you know how to create individual staff members, you'll need to add a link to the Staff page template. By default, this is set to the */staff* slug in your URL.
-For instance, if my domain is www.communityprotheme.com, then the Staff page will be located at www.communityprotheme.com**/staff**.
+For instance, if my domain is www.communityprotheme.com, then the Staff page will be located at www.communityprotheme.com/staff.
 
 ### Add Staff Link to Menu
 1. Navigate to **Appearance > Menu**.
