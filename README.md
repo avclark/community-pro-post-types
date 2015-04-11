@@ -13,6 +13,11 @@ Sermons are a useful custom post type that allows you to fill in some details an
 6. Configure the rest like a normal post or page in WordPress.
 7. Click the **Publish** button.
 
+### Configuring the Sermons Archive Settings
+1. Navigate to **Sermons > Archive Settings**.
+2. Add the desired **Archive Title** and **Archive Intro Text**.
+3. Click the **Save Settings** button.
+
 ## Configuring Staff
 The Staff page is a way to organize staff information for your organization or church.
 
@@ -36,3 +41,8 @@ For instance, if my domain is www.communityprotheme.com, then the Staff page wil
 6. Save your Menu.
 
 You should now see the link on your navigation.
+
+### Configuring the Sermons Archive Settings
+1. Navigate to **Sermons > Archive Settings**.
+2. Add the desired **Archive Title** and **Archive Intro Text**.
+3. Click the **Save Settings** button.
