@@ -33,12 +33,12 @@ class Community_Pro_Simple_CTA_Widget extends WP_Widget {
 		$this->defaults = array(
 			'title'           => '',
 			'page_id'         => '',
-			'more_text'       => 'Learn More',
+			'more_text'       => __( 'Learn More', 'community-pro-post-types' ),
 		);
 
 		$widget_ops = array(
 			'classname'   => 'featured-content simple-cta',
-			'description' => __( 'Displays simple CTA for footer widget area', 'community_pro' ),
+			'description' => __( 'Displays simple CTA for footer widget area', 'community-pro-post-types' ),
 		);
 
 		$control_ops = array(
@@ -47,7 +47,7 @@ class Community_Pro_Simple_CTA_Widget extends WP_Widget {
 			'height'  => 250,
 		);
 
-		parent::__construct( 'simple-cta-widget', __( 'CP - Simple CTA', 'community_pro' ), $widget_ops, $control_ops );
+		parent::__construct( 'simple-cta-widget', __( 'CP - Simple CTA', 'community-pro-post-types' ), $widget_ops, $control_ops );
 
 	}
 
@@ -132,19 +132,19 @@ class Community_Pro_Simple_CTA_Widget extends WP_Widget {
 
 		?>
 		<p>
-			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title', 'community_pro' ); ?>:</label>
+			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title', 'community-pro-post-types' ); ?>:</label>
 			<input type="text" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" value="<?php echo esc_attr( $instance['title'] ); ?>" class="widefat" />
 		</p>
 
 		<p>
-			<label for="<?php echo $this->get_field_id( 'page_id' ); ?>"><?php _e( 'Page', 'community_pro' ); ?>:</label>
+			<label for="<?php echo $this->get_field_id( 'page_id' ); ?>"><?php _e( 'Page', 'community-pro-post-types' ); ?>:</label>
 			<?php wp_dropdown_pages( array( 'name' => $this->get_field_name( 'page_id' ), 'selected' => $instance['page_id'] ) ); ?>
 		</p>
 
 		<hr class="div" />
 
 		<p>
-			<label for="<?php echo $this->get_field_id( 'more_text' ); ?>"><?php _e( 'More Text', 'community_pro' ); ?>:</label>
+			<label for="<?php echo $this->get_field_id( 'more_text' ); ?>"><?php _e( 'More Text', 'community-pro-post-types' ); ?>:</label>
 			<input type="text" id="<?php echo $this->get_field_id( 'more_text' ); ?>" name="<?php echo $this->get_field_name( 'more_text' ); ?>" value="<?php echo esc_attr( $instance['more_text'] ); ?>" />
 		</p>
 		<?php

@@ -1,0 +1,449 @@
+# Translation of Community Pro Post Types in German
+# This file is distributed under the same license as the Community Pro Post Types package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2015-04-23 07:41:13+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/1.0-alpha-1000\n"
+"Project-Id-Version: Community Pro Post Types\n"
+
+#: community-pro-post-types.php:0
+msgid "Community Pro Custom Post Types"
+msgstr "Community Pro Custom Post Types"
+
+#: community-pro-post-types.php:0
+msgid "https://github.com/calvinmakes/community-pro-post-types"
+msgstr "https://github.com/calvinmakes/community-pro-post-types"
+
+#: community-pro-post-types.php:0
+msgid "The official custom post types for the Community Pro Theme"
+msgstr "Die offiziellen Inhaltstypen für das Community Pro Theme (Child Theme für Genesis Framework)."
+
+#: community-pro-post-types.php:0
+msgid "Calvin Makes"
+msgstr "Calvin Makes"
+
+#: community-pro-post-types.php:0
+msgid "http://www.calvinmakes.com"
+msgstr "http://www.calvinmakes.com/"
+
+#: lib/taxonomies/community-pro-cpt-taxonomies.php:17
+msgctxt "Taxonomy plural name"
+msgid "Staff Categories"
+msgstr "Kategorien"
+
+#: lib/taxonomies/community-pro-cpt-taxonomies.php:18
+msgctxt "Taxonomy singular name"
+msgid "Staff Category"
+msgstr "Kategorie"
+
+#: lib/taxonomies/community-pro-cpt-taxonomies.php:45
+msgctxt "Taxonomy plural name"
+msgid "Sermon Categories"
+msgstr "Predigtkategorien"
+
+#: lib/taxonomies/community-pro-cpt-taxonomies.php:46
+msgctxt "Taxonomy singular name"
+msgid "Sermon Category"
+msgstr "Predigtkategorie"
+
+#: lib/widgets/community-pro-simple-cta-widget.php:36
+msgid "Learn More"
+msgstr "Mehr erfahren"
+
+#: community-pro-post-types.php:116
+msgid "%s only work with the Genesis Framework. It has been <strong>deactivated</strong>."
+msgstr "%s funktionieren nur mit dem Genesis Framework. Es wurde <strong>deaktiviert</strong>."
+
+#: community-pro-post-types.php:117
+msgid "Community Pro Widgets"
+msgstr "Community Pro Widgets"
+
+#: lib/post-types/community-pro-sermons.php:17
+msgid "Sermons"
+msgstr "Predigten"
+
+#: lib/post-types/community-pro-sermons.php:18
+msgid "Sermon"
+msgstr "Predigt"
+
+#: lib/post-types/community-pro-sermons.php:19
+msgid "Add New Sermon"
+msgstr "Neue Predigt hinzufügen"
+
+#: lib/post-types/community-pro-sermons.php:20
+msgid "Edit Sermon"
+msgstr "Predigt bearbeiten"
+
+#: lib/post-types/community-pro-sermons.php:21
+msgid "View Sermon"
+msgstr "Predigt ansehen"
+
+#: lib/post-types/community-pro-sermons.php:22
+msgid "Search Sermons"
+msgstr "Predigten suchen"
+
+#: lib/post-types/community-pro-sermons.php:44
+msgid "Sermon Details"
+msgstr "Predigtdetails"
+
+#: lib/post-types/community-pro-sermons.php:62
+msgid "Speaker"
+msgstr "Sprecher"
+
+#: lib/post-types/community-pro-sermons.php:65
+msgid "Sermon Date"
+msgstr "Predigtdatum"
+
+#: lib/post-types/community-pro-sermons.php:68
+msgid "Soundcloud URL"
+msgstr "SoundCloud-URL"
+
+#: lib/post-types/community-pro-staff.php:17
+msgid "Staff"
+msgstr "Personen"
+
+#: lib/post-types/community-pro-staff.php:18
+msgid "Staff Member"
+msgstr "Person"
+
+#: lib/post-types/community-pro-staff.php:19
+msgid "Add New Staff Member"
+msgstr "Neue Person hinzufügen"
+
+#: lib/post-types/community-pro-staff.php:20
+msgid "Edit Staff Member"
+msgstr "Person bearbeiten"
+
+#: lib/post-types/community-pro-staff.php:21
+msgid "View Staff Member"
+msgstr "Person ansehen"
+
+#: lib/post-types/community-pro-staff.php:22
+msgid "Search Staff"
+msgstr "Personen suchen"
+
+#: lib/taxonomies/community-pro-cpt-taxonomies.php:19
+msgid "Search Staff Categories"
+msgstr "Kategorien suchen"
+
+#: lib/taxonomies/community-pro-cpt-taxonomies.php:20
+msgid "All Staff Categories"
+msgstr "Alle Kategorien"
+
+#: lib/taxonomies/community-pro-cpt-taxonomies.php:21
+msgid "Parent Staff Category"
+msgstr "Übergeordnete Kategorie"
+
+#: lib/taxonomies/community-pro-cpt-taxonomies.php:22
+msgid "Parent Staff Category:"
+msgstr "Übergeordnete Kategorie:"
+
+#: lib/taxonomies/community-pro-cpt-taxonomies.php:23
+msgid "Edit Staff Category"
+msgstr "Kategorie bearbeiten"
+
+#: lib/taxonomies/community-pro-cpt-taxonomies.php:24
+msgid "Update Staff Category"
+msgstr "Kategorie aktualisieren"
+
+#: lib/taxonomies/community-pro-cpt-taxonomies.php:25
+msgid "Add New Staff Category"
+msgstr "Neue Kategorie hinzufügen"
+
+#: lib/taxonomies/community-pro-cpt-taxonomies.php:26
+msgid "New Staff Category"
+msgstr "Neue Kategorie"
+
+#: lib/taxonomies/community-pro-cpt-taxonomies.php:27
+msgid "Staff Categories"
+msgstr "Kategorien"
+
+#: lib/taxonomies/community-pro-cpt-taxonomies.php:47
+msgid "Search Sermon Categories"
+msgstr "Predigtkategorien suchen"
+
+#: lib/taxonomies/community-pro-cpt-taxonomies.php:48
+msgid "All Sermon Categories"
+msgstr "Alle Predigtkategorien"
+
+#: lib/taxonomies/community-pro-cpt-taxonomies.php:49
+msgid "Parent Sermon Category"
+msgstr "Übergeordnete Predigtkategorie"
+
+#: lib/taxonomies/community-pro-cpt-taxonomies.php:50
+msgid "Parent Sermon Category:"
+msgstr "Übergeordnete Predigtkategorie:"
+
+#: lib/taxonomies/community-pro-cpt-taxonomies.php:51
+msgid "Edit Sermon Category"
+msgstr "Predigtkategorie bearbeiten"
+
+#: lib/taxonomies/community-pro-cpt-taxonomies.php:52
+msgid "Update Sermon Category"
+msgstr "Predigtkategorie aktualisieren"
+
+#: lib/taxonomies/community-pro-cpt-taxonomies.php:53
+msgid "Add New Sermon Category"
+msgstr "Neue Predigtkategorie hinzufügen"
+
+#: lib/taxonomies/community-pro-cpt-taxonomies.php:54
+msgid "New Sermon Category"
+msgstr "Neue Predigtkategorie"
+
+#: lib/taxonomies/community-pro-cpt-taxonomies.php:55
+msgid "Sermon Categories"
+msgstr "Predigtkategorien"
+
+#: lib/widgets/community-pro-featured-post-widget.php:52
+#: lib/widgets/community-pro-sermons-widget.php:52
+msgid "By"
+msgstr "Von"
+
+#: lib/widgets/community-pro-featured-post-widget.php:55
+#: lib/widgets/community-pro-sermons-widget.php:55
+msgid "[Read More...]"
+msgstr "[Weiterlesen...]"
+
+#: lib/widgets/community-pro-featured-post-widget.php:59
+msgid "More Posts from this Category"
+msgstr "Mehr Beiträge aus dieser Kategorie"
+
+#: lib/widgets/community-pro-featured-post-widget.php:64
+msgid "Displays featured posts with thumbnails"
+msgstr "Zeigt ausgewählte Beiträge mit Vorschaubildern an."
+
+#: lib/widgets/community-pro-featured-post-widget.php:73
+msgid "CP - Featured Posts"
+msgstr "CP - Ausgewählte Beiträge"
+
+#: lib/widgets/community-pro-featured-post-widget.php:148
+msgid "(no title)"
+msgstr "(kein Titel)"
+
+#: lib/widgets/community-pro-featured-post-widget.php:280
+#: lib/widgets/community-pro-featured-post-widget.php:316
+#: lib/widgets/community-pro-featured-post-widget.php:442
+#: lib/widgets/community-pro-sermons-widget.php:205
+#: lib/widgets/community-pro-sermons-widget.php:230
+#: lib/widgets/community-pro-simple-cta-widget.php:135
+msgid "Title"
+msgstr "Titel"
+
+#: lib/widgets/community-pro-featured-post-widget.php:289
+msgid "Category"
+msgstr "Kategorie"
+
+#: lib/widgets/community-pro-featured-post-widget.php:296
+msgid "All Categories"
+msgstr "Alle Kategorien"
+
+#: lib/widgets/community-pro-featured-post-widget.php:303
+#: lib/widgets/community-pro-featured-post-widget.php:447
+msgid "Number of Posts to Show"
+msgstr "Anzahl anzuzeigender Beiträge"
+
+#: lib/widgets/community-pro-featured-post-widget.php:308
+msgid "Number of Posts to Offset"
+msgstr "Anzahl zu überspringender Beiträge"
+
+#: lib/widgets/community-pro-featured-post-widget.php:313
+#: lib/widgets/community-pro-sermons-widget.php:227
+msgid "Order By"
+msgstr "Sortieren nach"
+
+#: lib/widgets/community-pro-featured-post-widget.php:315
+#: lib/widgets/community-pro-sermons-widget.php:229
+msgid "Date"
+msgstr "Datum"
+
+#: lib/widgets/community-pro-featured-post-widget.php:317
+msgid "Parent"
+msgstr "Übergeordnet"
+
+#: lib/widgets/community-pro-featured-post-widget.php:318
+#: lib/widgets/community-pro-sermons-widget.php:231
+msgid "ID"
+msgstr "ID"
+
+#: lib/widgets/community-pro-featured-post-widget.php:319
+msgid "Comment Count"
+msgstr "Kommentarzähler"
+
+#: lib/widgets/community-pro-featured-post-widget.php:320
+#: lib/widgets/community-pro-sermons-widget.php:232
+msgid "Random"
+msgstr "Zufällig"
+
+#: lib/widgets/community-pro-featured-post-widget.php:325
+#: lib/widgets/community-pro-sermons-widget.php:237
+msgid "Sort Order"
+msgstr "Reihenfolge"
+
+#: lib/widgets/community-pro-featured-post-widget.php:327
+#: lib/widgets/community-pro-sermons-widget.php:239
+msgid "Descending (3, 2, 1)"
+msgstr "Absteigend (3, 2, 1)"
+
+#: lib/widgets/community-pro-featured-post-widget.php:328
+#: lib/widgets/community-pro-sermons-widget.php:240
+msgid "Ascending (1, 2, 3)"
+msgstr "Aufsteigend (1, 2, 3)"
+
+#: lib/widgets/community-pro-featured-post-widget.php:334
+msgid "Exclude Previously Displayed Posts?"
+msgstr "Zuvor angezeigte Beiträge ausschließen?"
+
+#: lib/widgets/community-pro-featured-post-widget.php:343
+msgid "Show Author Gravatar"
+msgstr "Autoren-Gravatar anzeigen"
+
+#: lib/widgets/community-pro-featured-post-widget.php:347
+msgid "Gravatar Size"
+msgstr "Gravatargröße"
+
+#: lib/widgets/community-pro-featured-post-widget.php:349
+msgid "Small (45px)"
+msgstr "Klein (45 Px)"
+
+#: lib/widgets/community-pro-featured-post-widget.php:350
+msgid "Medium (65px)"
+msgstr "Mittel (65 Px)"
+
+#: lib/widgets/community-pro-featured-post-widget.php:351
+msgid "Large (85px)"
+msgstr "Groß (85 Px)"
+
+#: lib/widgets/community-pro-featured-post-widget.php:352
+msgid "Extra Large (125px)"
+msgstr "Extragroß (125 Px)"
+
+#: lib/widgets/community-pro-featured-post-widget.php:357
+msgid "Gravatar Alignment"
+msgstr "Gravatarausrichtung"
+
+#: lib/widgets/community-pro-featured-post-widget.php:359
+#: lib/widgets/community-pro-featured-post-widget.php:389
+msgid "None"
+msgstr "Keine"
+
+#: lib/widgets/community-pro-featured-post-widget.php:360
+#: lib/widgets/community-pro-featured-post-widget.php:390
+msgid "Left"
+msgstr "Links"
+
+#: lib/widgets/community-pro-featured-post-widget.php:361
+#: lib/widgets/community-pro-featured-post-widget.php:391
+msgid "Right"
+msgstr "Rechts"
+
+#: lib/widgets/community-pro-featured-post-widget.php:371
+msgid "Show Featured Image"
+msgstr "Ausgewähltes Bild anzeigen"
+
+#: lib/widgets/community-pro-featured-post-widget.php:375
+msgid "Image Size"
+msgstr "Bildgröße"
+
+#: lib/widgets/community-pro-featured-post-widget.php:387
+msgid "Image Alignment"
+msgstr "Bildausrichtung"
+
+#: lib/widgets/community-pro-featured-post-widget.php:392
+msgid "Center"
+msgstr "Zentriert"
+
+#: lib/widgets/community-pro-featured-post-widget.php:406
+msgid "Show Post Title"
+msgstr "Beitragstitel anzeigen"
+
+#: lib/widgets/community-pro-featured-post-widget.php:411
+msgid "Show Post Info"
+msgstr "Beitragsinfo anzeigen"
+
+#: lib/widgets/community-pro-featured-post-widget.php:416
+msgid "Content Type"
+msgstr "Inhaltstyp"
+
+#: lib/widgets/community-pro-featured-post-widget.php:418
+msgid "Show Content"
+msgstr "Kompletter Inhalt"
+
+#: lib/widgets/community-pro-featured-post-widget.php:419
+msgid "Show Excerpt"
+msgstr "Textauszug"
+
+#: lib/widgets/community-pro-featured-post-widget.php:420
+msgid "Show Content Limit"
+msgstr "Inhaltslimit"
+
+#: lib/widgets/community-pro-featured-post-widget.php:421
+msgid "No Content"
+msgstr "Kein Inhalt"
+
+#: lib/widgets/community-pro-featured-post-widget.php:424
+msgid "Limit content to"
+msgstr "Inhalt beschränken auf"
+
+#: lib/widgets/community-pro-featured-post-widget.php:426
+msgid "characters"
+msgstr "Zeichen"
+
+#: lib/widgets/community-pro-featured-post-widget.php:431
+msgid "More Text (if applicable)"
+msgstr "Mehr-Text (falls verfügbar)"
+
+#: lib/widgets/community-pro-featured-post-widget.php:439
+msgid "To display an unordered list of more posts from this category, please fill out the information below"
+msgstr "Um eine ungeordnete Liste von mehr Beiträgen aus dieser Kategorie anzuzeigen, füllen Sie bitte die Informationen unten aus."
+
+#: lib/widgets/community-pro-featured-post-widget.php:457
+msgid "Show Category Archive Link"
+msgstr "Kategoriearchiv-Link anzeigen"
+
+#: lib/widgets/community-pro-featured-post-widget.php:461
+msgid "Link Text"
+msgstr "Linktext"
+
+#: lib/widgets/community-pro-sermons-widget.php:60
+msgid "Displays Community Pro Sermons"
+msgstr "Zeigt Predigten für Community Pro an."
+
+#: lib/widgets/community-pro-sermons-widget.php:69
+msgid "CP - Sermons Widget"
+msgstr "CP - Predigten-Widget"
+
+#: lib/widgets/community-pro-sermons-widget.php:213
+msgid "Show Sermon Title"
+msgstr "Predigttitel anzeigen"
+
+#: lib/widgets/community-pro-sermons-widget.php:217
+msgid "Number of Sermons to Show"
+msgstr "Anzahl anzuzeigender Predigten"
+
+#: lib/widgets/community-pro-sermons-widget.php:222
+msgid "Number of Sermons to Offset"
+msgstr "Anzahl zu überspringender Predigten"
+
+#: lib/widgets/community-pro-sermons-widget.php:246
+msgid "Exclude Previously Displayed Sermons?"
+msgstr "Zuvor angezeigte Predigten ausschließen?"
+
+#: lib/widgets/community-pro-simple-cta-widget.php:41
+msgid "Displays simple CTA for footer widget area"
+msgstr "Zeigt einen einfachen Aufruf zum Handeln (CTA) im Fußzeilen-Widgetbereich an."
+
+#: lib/widgets/community-pro-simple-cta-widget.php:50
+msgid "CP - Simple CTA"
+msgstr "CP - Einfacher Aufruf"
+
+#: lib/widgets/community-pro-simple-cta-widget.php:140
+msgid "Page"
+msgstr "Seite"
+
+#: lib/widgets/community-pro-simple-cta-widget.php:147
+msgid "More Text"
+msgstr "Mehr-Text"

@@ -14,12 +14,12 @@
 function community_pro_sermons() {
 	$args = array(
 		'labels'				=> array(
-			'name'				=> __( 'Sermons', 'community_pro' ),
-			'singular_name'		=> __( 'Sermon', 'community_pro' ),
-			'add_new_item'		=> __( 'Add New Sermon', 'community_pro' ),
-			'edit_item'			=> __( 'Edit Sermon', 'community_pro' ),
-			'view_item'			=> __( 'View Sermon', 'community_pro' ),
-			'search_items'		=> __( 'Search Sermons', 'community_pro' )
+			'name'				=> __( 'Sermons', 'community-pro-post-types' ),
+			'singular_name'		=> __( 'Sermon', 'community-pro-post-types' ),
+			'add_new_item'		=> __( 'Add New Sermon', 'community-pro-post-types' ),
+			'edit_item'			=> __( 'Edit Sermon', 'community-pro-post-types' ),
+			'view_item'			=> __( 'View Sermon', 'community-pro-post-types' ),
+			'search_items'		=> __( 'Search Sermons', 'community-pro-post-types' )
 		),
 		'has_archive'			=> true,
 		'hierarchical'			=> false,
@@ -41,7 +41,7 @@ function community_pro_sermons_meta_admin() {
 	function community_pro_add_sermon_meta_box() {
 		add_meta_box(
 			'community_pro_sermon_details',
-			__( 'Sermon Details', 'community_pro' ),
+			__( 'Sermon Details', 'community-pro-post-types' ),
 			'community_pro_display_sermon_details_admin',
 			'community-pro-sermon',
 			'side'
@@ -59,13 +59,13 @@ function community_pro_sermons_meta_admin() {
 		$sermon_date = get_post_meta( $post->ID, '_community_pro_sermon_date_field', true );
 	    $soundcloud_url = get_post_meta( $post->ID, '_community_pro_soundcloud_url_field', true );
 
-    	echo	'<label for="community_pro_sermon_speaker">Speaker</label>',
+    	echo	'<label for="community_pro_sermon_speaker">' . __( 'Speaker', 'community-pro-post-types' ) . '</label>',
 				'<input type="text" id="sermon-speaker" name="community_pro_speaker_field" value="' . $sermon_speaker . '" size="25" style="width: 100%;" />',
 				
-				'<label for="community_pro_sermon_date">Sermon Date</label>',
+				'<label for="community_pro_sermon_date">' . __( 'Sermon Date', 'community-pro-post-types' ) . '</label>',
 				'<input type="date" id="sermon-date" name="community_pro_sermon_date_field" value="' . $sermon_date . '" size="25" style="width: 100%;" />',
 				
-				'<label for="community_pro_souncloud_url">Soundcloud URL</label>',
+				'<label for="community_pro_souncloud_url">' . __( 'Soundcloud URL', 'community-pro-post-types' ) . '</label>',
 				'<input type="text" id="soundcloud-url" name="community_pro_soundcloud_url_field" value="' . $soundcloud_url . '" size="25" style="width: 100%;" />';
 
 	}
