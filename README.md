@@ -1,6 +1,9 @@
 # Community Pro Post Types
 The official custom post types for the Community Pro Genesis Child Theme by <a href="http://www.twitter.com/calvin_makes">Calvin Makes</a> and <a href="http:/www.twitter.com/avclark">Adam Clark</a>.
 
+### Release Notes (v1.1)
+Pull request to add better translation support and unify text-domains. **Please Note:** that if you already have custom taxonomies associated with this plugin, and you update, you may have to rebuild and assign your categories to their respective post types.
+
 
 ## Configuring Sermons
 Sermons are a useful custom post type that allows you to fill in some details and have custom taxonomies for different series and/or categories.
