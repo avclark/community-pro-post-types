@@ -1,14 +1,50 @@
 <?php
 /*
-    Plugin Name: Community Pro Custom Post Types
-    Plugin URI: https://github.com/calvinmakes/community-pro-post-types
-    Description: The official custom post types for the Community Pro Theme
-    Author: Calvin Makes
-    Version: 1.1
-    Author URI: http://www.calvinmakes.com
+    Plugin Name:       Community Pro Custom Post Types
+    Plugin URI:        https://github.com/calvinmakes/community-pro-post-types
+    Description:       The official custom post types for the Community Pro Theme
+    Author:            Calvin Makes
+    Version:           1.1
+    Author URI:        http://www.calvinmakes.com
+    Text Domain:       community-pro-post-types
+    Domain Path:       /languages/
+    GitHub Plugin URI: https://github.com/calvinmakes/community-pro-post-types
+    GitHub Branch:     master
 */
 
 defined('ABSPATH') or die("No script kiddies please!");
+
+
+add_action( 'plugins_loaded', 'community_pro_load_translations' );
+/**
+ * Load translations.
+ */
+function community_pro_load_translations() {
+
+  /** Set unique textdomain string */
+  $cppt_textdomain = 'community-pro-post-types';
+
+  /** The 'plugin_locale' filter is also used by default in load_plugin_textdomain() */
+  $locale = apply_filters( 'plugin_locale', get_locale(), $cppt_textdomain );
+
+  /** Set filter for WordPress languages directory */
+  $cppt_wp_lang_dir = apply_filters(
+    'cppt_filter_wp_lang_dir',
+    trailingslashit( WP_LANG_DIR ) . trailingslashit( $cppt_textdomain ) . $cppt_textdomain . '-' . $locale . '.mo'
+  );
+
+  /** Translations: First, look in WordPress' "languages" folder = custom & update-safe! */
+  load_textdomain( $cppt_textdomain, $cppt_wp_lang_dir );
+
+  /** Translations: Secondly, look in plugin's "languages" folder = default */
+  load_plugin_textdomain(
+    $cppt_textdomain,
+    FALSE,
+    trailingslashit( dirname( plugin_basename( __FILE__ ) ) ) . 'languages'
+  );
+
+}
+
 
 require_once("lib/post-types/community-pro-sermons.php");
 require_once("lib/post-types/community-pro-staff.php");
@@ -60,27 +96,38 @@ function community_pro_add_subtitles_support() {
   * @version 1.0.0
   *
   */
-add_action( 'init', 'gfcptw_init' );
-function gfcptw_init() {
+add_action( 'init', 'community_pro_widgets_init' );
+function community_pro_widgets_init() {
 	if ( 'genesis' !== basename( get_template_directory() ) ) {
-		add_action( 'admin_init', 'gfcptw_deactivate' );
-		add_action( 'admin_notices', 'gfcptw_notice' );
+		add_action( 'admin_init', 'community_pro_deactivate' );
+		add_action( 'admin_notices', 'community_pro_notice' );
 		return;
 	}
 
 }
 
-function gfcptw_deactivate() {
+function community_pro_deactivate() {
 	deactivate_plugins( plugin_basename( __FILE__ ) );
 }
 
-function gfcptw_notice() {
-	echo '<div class="error"><p><strong>Community Pro Widgets</strong> only work with the Genesis Framework. It has been <strong>deactivated</strong>.</p></div>';
+function community_pro_notice() {
+
+  $notice = sprintf(
+    __( '%s only work with the Genesis Framework. It has been <strong>deactivated</strong>.', 'community-pro-post-types' ),
+    '<strong>' . __( 'Community Pro Widgets', 'community-pro-post-types' ) . '</strong>'
+  );
+
+	printf(
+    '<div class="error"><p>%s</p></div>',
+    $notice
+
+  );
+
 }
 
 // Register the widget
-add_action( 'widgets_init', 'gfcptw_register_widget' );
-function gfcptw_register_widget() {
+add_action( 'widgets_init', 'community_pro_register_widget' );
+function community_pro_register_widget() {
   register_widget( 'Community_Pro_Sermon_Widget' );
   register_widget( 'Community_Pro_Featured_Post');
   register_widget( 'Community_Pro_Simple_CTA_Widget');

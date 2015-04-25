@@ -14,12 +14,12 @@
 function community_pro_staff() {
 	$args = array(
 		'labels'				=> array(
-			'name'				=> __( 'Staff', 'community-pro' ),
-			'singular_name'		=> __( 'Staff Member', 'community-pro' ),
-			'add_new_item'		=> __( 'Add New Staff Member', 'community-pro' ),
-			'edit_item'			=> __( 'Edit Staff Member', 'community-pro' ),
-			'view_item'			=> __( 'View Staff Member', 'community_pro' ),
-			'search_items'		=> __( 'Search Staff', 'community_pro' )
+			'name'				=> __( 'Staff', 'community-pro-post-types' ),
+			'singular_name'		=> __( 'Staff Member', 'community-pro-post-types' ),
+			'add_new_item'		=> __( 'Add New Staff Member', 'community-pro-post-types' ),
+			'edit_item'			=> __( 'Edit Staff Member', 'community-pro-post-types' ),
+			'view_item'			=> __( 'View Staff Member', 'community-pro-post-types' ),
+			'search_items'		=> __( 'Search Staff', 'community-pro-post-types' )
 		),
 		'has_archive'			=> true,
 		'hierarchical'			=> false,

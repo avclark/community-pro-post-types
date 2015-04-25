@@ -14,17 +14,17 @@
 function community_pro_staff_taxonomies() {
 	
 	$labels = array(
-		'name'				=> _x( 'Staff Categories', 'community_pro' ),
-		'singular_name'		=> _x( 'Staff Category', 'community_pro' ),
-		'search_items'		=> __( 'Search Staff Categories', 'community_pro' ),
-		'all_items'         => __( 'All Staff Categories', 'community_pro' ),
-		'parent_item'       => __( 'Parent Staff Category', 'community_pro' ),
-		'parent_item_colon' => __( 'Parent Staff Category:', 'community_pro' ),
-		'edit_item'         => __( 'Edit Staff Category', 'community_pro' ),
-		'update_item'       => __( 'Update Staff Category', 'community_pro' ),
-		'add_new_item'      => __( 'Add New Staff Category', 'community_pro' ),
-		'new_item_name'     => __( 'New Staff Category', 'community_pro' ),
-		'menu_name'         => __( 'Staff Categories', 'community_pro' ),
+		'name'				=> _x( 'Staff Categories', 'Taxonomy plural name', 'community-pro-post-types' ),
+		'singular_name'		=> _x( 'Staff Category', 'Taxonomy singular name', 'community-pro-post-types' ),
+		'search_items'		=> __( 'Search Staff Categories', 'community-pro-post-types' ),
+		'all_items'         => __( 'All Staff Categories', 'community-pro-post-types' ),
+		'parent_item'       => __( 'Parent Staff Category', 'community-pro-post-types' ),
+		'parent_item_colon' => __( 'Parent Staff Category:', 'community-pro-post-types' ),
+		'edit_item'         => __( 'Edit Staff Category', 'community-pro-post-types' ),
+		'update_item'       => __( 'Update Staff Category', 'community-pro-post-types' ),
+		'add_new_item'      => __( 'Add New Staff Category', 'community-pro-post-types' ),
+		'new_item_name'     => __( 'New Staff Category', 'community-pro-post-types' ),
+		'menu_name'         => __( 'Staff Categories', 'community-pro-post-types' ),
 	);
 
 	$args = array(
@@ -42,17 +42,17 @@ function community_pro_staff_taxonomies() {
 function community_pro_sermon_taxonomies() {
 
 	$labels = array(
-		'name'				=> _x( 'Sermon Categories', 'community_pro' ),
-		'singular_name'		=> _x( 'Sermon Category', 'community_pro' ),
-		'search_items'		=> __( 'Search Sermon Categories', 'community_pro' ),
-		'all_items'         => __( 'All Sermon Categories', 'community_pro' ),
-		'parent_item'       => __( 'Parent Sermon Category', 'community_pro' ),
-		'parent_item_colon' => __( 'Parent Sermon Category:', 'community_pro' ),
-		'edit_item'         => __( 'Edit Sermon Category', 'community_pro' ),
-		'update_item'       => __( 'Update Sermon Category', 'community_pro' ),
-		'add_new_item'      => __( 'Add New Sermon Category', 'community_pro' ),
-		'new_item_name'     => __( 'New Sermon Category', 'community_pro' ),
-		'menu_name'         => __( 'Sermon Categories', 'community_pro' ),
+		'name'				=> _x( 'Sermon Categories', 'Taxonomy plural name', 'community-pro-post-types' ),
+		'singular_name'		=> _x( 'Sermon Category', 'Taxonomy singular name', 'community-pro-post-types' ),
+		'search_items'		=> __( 'Search Sermon Categories', 'community-pro-post-types' ),
+		'all_items'         => __( 'All Sermon Categories', 'community-pro-post-types' ),
+		'parent_item'       => __( 'Parent Sermon Category', 'community-pro-post-types' ),
+		'parent_item_colon' => __( 'Parent Sermon Category:', 'community-pro-post-types' ),
+		'edit_item'         => __( 'Edit Sermon Category', 'community-pro-post-types' ),
+		'update_item'       => __( 'Update Sermon Category', 'community-pro-post-types' ),
+		'add_new_item'      => __( 'Add New Sermon Category', 'community-pro-post-types' ),
+		'new_item_name'     => __( 'New Sermon Category', 'community-pro-post-types' ),
+		'menu_name'         => __( 'Sermon Categories', 'community-pro-post-types' ),
 	);
 
 	$args = array(
